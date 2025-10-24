@@ -1,0 +1,78 @@
+name: Weekly Review
+
+on:
+  push:
+    branches: [ main, master ]
+    paths:
+      - "exercises/**"
+      - "tools/**"
+      - "pyproject.toml"
+      - "requirements.txt"            # ← aquí
+  schedule:
+    - cron: "0 5 * * 1"               # ~07:00 Madrid en verano
+  workflow_dispatch:
+
+concurrency:
+  group: reviewer-${{ github.ref }}
+  cancel-in-progress: true
+
+permissions:
+  contents: write
+
+jobs:
+  review:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout (full history)
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: Cache pip
+        uses: actions/cache@v4
+        with:
+          path: ~/.cache/pip
+          key: ${{ runner.os }}-pip-${{ hashFiles('**/requirements*.txt') }}   # ← flexible
+          restore-keys: |
+            ${{ runner.os }}-pip-
+
+      - name: Install deps
+        run: |
+          python -m pip install --upgrade pip
+          pip install -r requirements.txt          # ← aquí
+
+      - name: Run reviewer
+        run: python tools/reviewer.py
+
+      - name: Sync with remote (rebase)
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add -A  # <--- añade todos los cambios antes del rebase
+          git stash   # <--- los guarda temporalmente
+          git pull --rebase origin ${{ github.ref_name }} || true
+          git stash pop || true  # <--- vuelve a aplicar los cambios
+
+      - name: Commit reports
+        uses: stefanzweifel/git-auto-commit-action@v5
+        with:
+          commit_message: "chore(report): reviewer pro"
+          branch: ${{ github.ref_name }}
+          file_pattern: |
+            reports/*.md
+            pdf_report_weekly/*.pdf
+          push_options: --force-with-lease
+
+      - name: Upload artifacts
+        uses: actions/upload-artifact@v4
+        with:
+          name: reviewer-output
+          path: |
+            reports/
+            pdf_report_weekly/
+
