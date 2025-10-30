@@ -4,45 +4,65 @@ from typing import List, Dict, Any
 
 def run_quiz(questions: List[Dict[str, Any]], n: int) -> Dict[str, Any]:
     if not questions:
-        raise ValueError("No hay preguntas en la base de datos. Ingresa tests XML primero.")
-    pool = questions[:] if len(questions) <= n else random.sample(questions, n)
+        raise ValueError("No hay preguntas en la base de datos.")
+    pool = random.sample(questions, min(n, len(questions)))
 
     correct = 0
     mistakes = []
+
     for i, q in enumerate(pool, start=1):
         print(f"\n[{i}/{len(pool)}] {q['text']}")
-        options = q["options"][:]
-        # barajamos pero recordamos dónde quedó la correcta
-        indices = list(range(len(options)))
+        # barajar opciones conservando índice
+        indices = list(range(len(q["options"])))
         random.shuffle(indices)
-        inv = {new_i: old_i for new_i, old_i in enumerate(indices)}
-        shuffled = [options[idx] for idx in indices]
-        correct_new_index = indices.index(q["correct_index"])
+        shuffled = [q["options"][k] for k in indices]
 
+        # determinar índice(s) correctos en el arreglo barajado
+        if q.get("multi"):
+            correct_orig = set(q["correct_indices"])
+            correct_new = {indices.index(k) for k in correct_orig}
+        else:
+            correct_new = {indices.index(q["correct_index"])}
+
+        # mostrar
         for j, opt in enumerate(shuffled, start=1):
             print(f"  {j}. {opt['text']}")
-        while True:
-            raw = input("Tu respuesta (número): ").strip()
-            if raw.isdigit() and 1 <= int(raw) <= len(shuffled):
-                ans = int(raw) - 1
-                break
-            print("⛔ Entrada inválida. Escribe un número válido.")
 
-        if ans == correct_new_index:
+        # entrada usuario
+        if q.get("multi"):
+            prompt = "Tu respuesta (varias separadas por comas, ej. 1,3): "
+            while True:
+                raw = input(prompt).strip()
+                try:
+                    chosen = {int(x)-1 for x in raw.replace(" ", "").split(",") if x}
+                except ValueError:
+                    print("⛔ Formato inválido. Ejemplo válido: 1,3")
+                    continue
+                if chosen and all(0 <= x < len(shuffled) for x in chosen):
+                    break
+                print("⛔ Números fuera de rango.")
+        else:
+            prompt = "Tu respuesta (número): "
+            while True:
+                raw = input(prompt).strip()
+                if raw.isdigit() and 1 <= int(raw) <= len(shuffled):
+                    chosen = {int(raw)-1}
+                    break
+                print("⛔ Escribe un número válido.")
+
+        # corrección
+        if chosen == correct_new:
             print("✅ ¡Correcto!")
             correct += 1
         else:
             print("❌ Incorrecto.")
+            your_ans_text = ", ".join(shuffled[x]["text"] for x in sorted(chosen))
+            corr_text = ", ".join(shuffled[x]["text"] for x in sorted(correct_new))
             mistakes.append({
                 "question": q["text"],
-                "your_answer": shuffled[ans]["text"],
-                "correct_answer": shuffled[correct_new_index]["text"]
+                "your_answer": your_ans_text,
+                "correct_answer": corr_text
             })
 
     score = round(100 * correct / len(pool), 2)
-    return {
-        "total": len(pool),
-        "correct": correct,
-        "score": score,
-        "mistakes": mistakes
-    }
+    return {"total": len(pool), "correct": correct, "score": score, "mistakes": mistakes}
