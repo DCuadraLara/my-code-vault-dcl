@@ -1,3 +1,182 @@
 {
-  "questions": []
+  "questions": [
+    {
+      "text": "Cuando se oculta la información para poder implementarla de diferentes maneras sin que esto influya en el resto de elementos, decimos que estamos aplicando...",
+      "options": [
+        {
+          "text": "a. Abstracción."
+        },
+        {
+          "text": "b. Encapsulación."
+        },
+        {
+          "text": "c. Corrección."
+        },
+        {
+          "text": "d. Algoritmos."
+        }
+      ],
+      "correct_index": 1,
+      "multi": false,
+      "source": "test01.xml"
+    },
+    {
+      "text": "Marca los identificadores que además de ser correctos en Java para nombrar variables, cumplen los convenios comúnmente aceptados.",
+      "options": [
+        {
+          "text": "a. miVariable."
+        },
+        {
+          "text": "b. $miVariable."
+        },
+        {
+          "text": "c. mi Variable."
+        },
+        {
+          "text": "d. variable."
+        },
+        {
+          "text": "e. _miVariable."
+        },
+        {
+          "text": "f. mivariable."
+        }
+      ],
+      "correct_indices": [
+        0,
+        3,
+        5
+      ],
+      "multi": true,
+      "source": "test01.xml"
+    },
+    {
+      "text": "Para una cadena de caracteres (String), el método length() devuelve:",
+      "options": [
+        {
+          "text": "a. La longitud de esa cadena de caracteres."
+        },
+        {
+          "text": "b. Esa misma cadena en mayúsculas."
+        },
+        {
+          "text": "c. Esa misma cadena en minúsculas."
+        },
+        {
+          "text": "d. Esa misma cadena pero al revés."
+        }
+      ],
+      "correct_index": 0,
+      "multi": false,
+      "source": "test01.xml"
+    },
+    {
+      "text": "Indica el valor de la variable v después de la siguiente sentencia de asignación: v = 10 + 12 * 2 + 12 / 2;",
+      "options": [
+        {
+          "text": "a. 50."
+        },
+        {
+          "text": "b. 28."
+        },
+        {
+          "text": "c. 40."
+        },
+        {
+          "text": "d. 54."
+        }
+      ],
+      "correct_index": 2,
+      "multi": false,
+      "source": "test01.xml"
+    },
+    {
+      "text": "En una de las siguientes declaraciones el compilador de Java daría error, ¿en cuál?",
+      "options": [
+        {
+          "text": "a. n1=0b1010;"
+        },
+        {
+          "text": "b. float n2=10;"
+        },
+        {
+          "text": "c. float n3=10.0f;"
+        },
+        {
+          "text": "d. float n4=10.0;"
+        }
+      ],
+      "correct_index": 3,
+      "multi": false,
+      "source": "test01.xml"
+    },
+    {
+      "text": "Las constantes, por convenio, se escriben en letra minúscula, separando las palabras con el guión bajo. ¿Verdadero o falso?",
+      "options": [
+        {
+          "text": "Verdadero"
+        },
+        {
+          "text": "Falso"
+        }
+      ],
+      "correct_index": 1,
+      "multi": false,
+      "source": "test01.xml"
+    },
+    {
+      "text": "Dado a=0, b=10 y c=20, ¿cuál de las siguientes expresiones sería falsa?",
+      "options": [
+        {
+          "text": "a. a>b || c>b"
+        },
+        {
+          "text": "b. a!=b || c>b"
+        },
+        {
+          "text": "c. a==b || c<b"
+        },
+        {
+          "text": "d. a>=b || c>=b"
+        }
+      ],
+      "correct_index": 2,
+      "multi": false,
+      "source": "test01.xml"
+    },
+    {
+      "text": "El proceso por el cual se traducen las instrucciones escritas en un determinado lenguaje de programación a lenguaje que la máquina es capaz de interpretar es conocido con el nombre de:",
+      "options": [
+        {
+          "text": "a. Análisis."
+        },
+        {
+          "text": "b. Compilación."
+        },
+        {
+          "text": "c. Diseño."
+        },
+        {
+          "text": "d. Validación."
+        }
+      ],
+      "correct_index": 1,
+      "multi": false,
+      "source": "test01.xml"
+    },
+    {
+      "text": "Los operadores aritméticos *, /, %, + y - tienen el mismo nivel de precedencia. ¿Verdadero o falso?",
+      "options": [
+        {
+          "text": "Verdadero"
+        },
+        {
+          "text": "Falso"
+        }
+      ],
+      "correct_index": 1,
+      "multi": false,
+      "source": "test01.xml"
+    }
+  ]
 }

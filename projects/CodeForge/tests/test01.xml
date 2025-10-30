@@ -14,52 +14,52 @@
   <pregunta id="2" correcta="true" puntuacion="1.00">
     <enunciado>Cuando se oculta la información para poder implementarla de diferentes maneras sin que esto influya en el resto de elementos, decimos que estamos aplicando...</enunciado>
     <opciones>
-      <opcion>a. Abstracción.</opcion>
+      <opcion>Abstracción.</opcion>
       <opcion correcta="true">b. Encapsulación.</opcion>
-      <opcion>c. Corrección.</opcion>
-      <opcion>d. Algoritmos.</opcion>
+      <opcion>Corrección.</opcion>
+      <opcion>Algoritmos.</opcion>
     </opciones>
   </pregunta>
 
   <pregunta id="3" correcta="true" puntuacion="1.00">
     <enunciado>Marca los identificadores que además de ser correctos en Java para nombrar variables, cumplen los convenios comúnmente aceptados.</enunciado>
     <opciones multiple="true">
-      <opcion correcta="true">a. miVariable.</opcion>
-      <opcion>b. $miVariable.</opcion>
-      <opcion>c. mi Variable.</opcion>
-      <opcion correcta="true">d. variable.</opcion>
-      <opcion>e. _miVariable.</opcion>
-      <opcion correcta="true">f. mivariable.</opcion>
+      <opcion correcta="true">miVariable.</opcion>
+      <opcion>$miVariable.</opcion>
+      <opcion>mi Variable.</opcion>
+      <opcion correcta="true">variable.</opcion>
+      <opcion>_miVariable.</opcion>
+      <opcion correcta="true">mivariable.</opcion>
     </opciones>
   </pregunta>
 
   <pregunta id="4" correcta="true" puntuacion="1.00">
     <enunciado>Para una cadena de caracteres (String), el método length() devuelve:</enunciado>
     <opciones>
-      <opcion correcta="true">a. La longitud de esa cadena de caracteres.</opcion>
-      <opcion>b. Esa misma cadena en mayúsculas.</opcion>
-      <opcion>c. Esa misma cadena en minúsculas.</opcion>
-      <opcion>d. Esa misma cadena pero al revés.</opcion>
+      <opcion correcta="true">La longitud de esa cadena de caracteres.</opcion>
+      <opcion>Esa misma cadena en mayúsculas.</opcion>
+      <opcion>Esa misma cadena en minúsculas.</opcion>
+      <opcion>Esa misma cadena pero al revés.</opcion>
     </opciones>
   </pregunta>
 
   <pregunta id="5" correcta="true" puntuacion="1.00">
     <enunciado>Indica el valor de la variable v después de la siguiente sentencia de asignación: v = 10 + 12 * 2 + 12 / 2;</enunciado>
     <opciones>
-      <opcion>a. 50.</opcion>
-      <opcion>b. 28.</opcion>
-      <opcion correcta="true">c. 40.</opcion>
-      <opcion>d. 54.</opcion>
+      <opcion>50.</opcion>
+      <opcion>28.</opcion>
+      <opcion correcta="true">40.</opcion>
+      <opcion>54.</opcion>
     </opciones>
   </pregunta>
 
   <pregunta id="6" correcta="false" puntuacion="0.00">
     <enunciado>En una de las siguientes declaraciones el compilador de Java daría error, ¿en cuál?</enunciado>
     <opciones>
-      <opcion>a. n1=0b1010;</opcion>
-      <opcion>b. float n2=10;</opcion>
-      <opcion>c. float n3=10.0f;</opcion>
-      <opcion correcta="true">d. float n4=10.0;</opcion>
+      <opcion>n1=0b1010;</opcion>
+      <opcion>float n2=10;</opcion>
+      <opcion>float n3=10.0f;</opcion>
+      <opcion correcta="true">float n4=10.0;</opcion>
     </opciones>
   </pregunta>
 
@@ -74,20 +74,20 @@
   <pregunta id="8" correcta="true" puntuacion="1.00">
     <enunciado>Dado a=0, b=10 y c=20, ¿cuál de las siguientes expresiones sería falsa?</enunciado>
     <opciones>
-      <opcion>a. a&gt;b || c&gt;b</opcion>
-      <opcion>b. a!=b || c&gt;b</opcion>
-      <opcion correcta="true">c. a==b || c&lt;b</opcion>
-      <opcion>d. a&gt;=b || c&gt;=b</opcion>
+      <opcion>a&gt;b || c&gt;b</opcion>
+      <opcion>a!=b || c&gt;b</opcion>
+      <opcion correcta="true">a==b || c&lt;b</opcion>
+      <opcion>a&gt;=b || c&gt;=b</opcion>
     </opciones>
   </pregunta>
 
   <pregunta id="9" correcta="false" puntuacion="0.00">
     <enunciado>El proceso por el cual se traducen las instrucciones escritas en un determinado lenguaje de programación a lenguaje que la máquina es capaz de interpretar es conocido con el nombre de:</enunciado>
     <opciones>
-      <opcion>a. Análisis.</opcion>
-      <opcion correcta="true">b. Compilación.</opcion>
-      <opcion>c. Diseño.</opcion>
-      <opcion>d. Validación.</opcion>
+      <opcion>Análisis.</opcion>
+      <opcion correcta="true">Compilación.</opcion>
+      <opcion>Diseño.</opcion>
+      <opcion>Validación.</opcion>
     </opciones>
   </pregunta>
 
