@@ -17,7 +17,7 @@ The goal is to help you *learn smarter* — by building your own adaptive study 
 ## 🧠 Core Features
 | Feature | Description |
 |----------|--------------|
-| 🗂️ XML Import | Reads raw tests from `/data/incoming/` |
+| 🗂️ XML Import | Reads raw tests from `tests/` |
 | 🧮 Validation | Checks structure, unique IDs, valid answers, etc. |
 | 🧹 Filtering | Discards incorrect or duplicate questions |
 | 💾 JSON Database | Stores verified questions for reuse |
