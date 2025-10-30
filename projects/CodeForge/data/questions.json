@@ -4,16 +4,16 @@
       "text": "Cuando se oculta la información para poder implementarla de diferentes maneras sin que esto influya en el resto de elementos, decimos que estamos aplicando...",
       "options": [
         {
-          "text": "a. Abstracción."
+          "text": "Abstracción."
         },
         {
           "text": "b. Encapsulación."
         },
         {
-          "text": "c. Corrección."
+          "text": "Corrección."
         },
         {
-          "text": "d. Algoritmos."
+          "text": "Algoritmos."
         }
       ],
       "correct_index": 1,
@@ -24,22 +24,22 @@
       "text": "Marca los identificadores que además de ser correctos en Java para nombrar variables, cumplen los convenios comúnmente aceptados.",
       "options": [
         {
-          "text": "a. miVariable."
+          "text": "miVariable."
         },
         {
-          "text": "b. $miVariable."
+          "text": "$miVariable."
         },
         {
-          "text": "c. mi Variable."
+          "text": "mi Variable."
         },
         {
-          "text": "d. variable."
+          "text": "variable."
         },
         {
-          "text": "e. _miVariable."
+          "text": "_miVariable."
         },
         {
-          "text": "f. mivariable."
+          "text": "mivariable."
         }
       ],
       "correct_indices": [
@@ -54,16 +54,16 @@
       "text": "Para una cadena de caracteres (String), el método length() devuelve:",
       "options": [
         {
-          "text": "a. La longitud de esa cadena de caracteres."
+          "text": "La longitud de esa cadena de caracteres."
         },
         {
-          "text": "b. Esa misma cadena en mayúsculas."
+          "text": "Esa misma cadena en mayúsculas."
         },
         {
-          "text": "c. Esa misma cadena en minúsculas."
+          "text": "Esa misma cadena en minúsculas."
         },
         {
-          "text": "d. Esa misma cadena pero al revés."
+          "text": "Esa misma cadena pero al revés."
         }
       ],
       "correct_index": 0,
@@ -74,16 +74,16 @@
       "text": "Indica el valor de la variable v después de la siguiente sentencia de asignación: v = 10 + 12 * 2 + 12 / 2;",
       "options": [
         {
-          "text": "a. 50."
+          "text": "50."
         },
         {
-          "text": "b. 28."
+          "text": "28."
         },
         {
-          "text": "c. 40."
+          "text": "40."
         },
         {
-          "text": "d. 54."
+          "text": "54."
         }
       ],
       "correct_index": 2,
@@ -94,16 +94,16 @@
       "text": "En una de las siguientes declaraciones el compilador de Java daría error, ¿en cuál?",
       "options": [
         {
-          "text": "a. n1=0b1010;"
+          "text": "n1=0b1010;"
         },
         {
-          "text": "b. float n2=10;"
+          "text": "float n2=10;"
         },
         {
-          "text": "c. float n3=10.0f;"
+          "text": "float n3=10.0f;"
         },
         {
-          "text": "d. float n4=10.0;"
+          "text": "float n4=10.0;"
         }
       ],
       "correct_index": 3,
@@ -128,16 +128,16 @@
       "text": "Dado a=0, b=10 y c=20, ¿cuál de las siguientes expresiones sería falsa?",
       "options": [
         {
-          "text": "a. a>b || c>b"
+          "text": "a>b || c>b"
         },
         {
-          "text": "b. a!=b || c>b"
+          "text": "a!=b || c>b"
         },
         {
-          "text": "c. a==b || c<b"
+          "text": "a==b || c<b"
         },
         {
-          "text": "d. a>=b || c>=b"
+          "text": "a>=b || c>=b"
         }
       ],
       "correct_index": 2,
@@ -148,16 +148,16 @@
       "text": "El proceso por el cual se traducen las instrucciones escritas en un determinado lenguaje de programación a lenguaje que la máquina es capaz de interpretar es conocido con el nombre de:",
       "options": [
         {
-          "text": "a. Análisis."
+          "text": "Análisis."
         },
         {
-          "text": "b. Compilación."
+          "text": "Compilación."
         },
         {
-          "text": "c. Diseño."
+          "text": "Diseño."
         },
         {
-          "text": "d. Validación."
+          "text": "Validación."
         }
       ],
       "correct_index": 1,
