@@ -2,10 +2,11 @@ from __future__ import annotations
 import argparse
 from pathlib import Path
 from typing import List
-from storage import ensure_db, get_all_questions, add_questions
-from ingest import parse_xml_questions
-from quiz import run_quiz
-from report import write_report
+from src.storage import ensure_db, get_all_questions, add_questions
+from src.ingest import parse_xml_questions
+from src.quiz import run_quiz
+from src.report import write_report
+
 
 def cmd_ingest(files: List[str]) -> None:
     ensure_db()
