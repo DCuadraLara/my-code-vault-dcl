@@ -1,117 +1,120 @@
-# 🚤 Club Náutico – Gestión de Embarcaciones (Java – DAM)
+# 🚤 Club Náutico -- Boat Management System (Java -- DAM)
 
-Proyecto desarrollado como práctica de los Temas 1, 2 y 3 del módulo de **Programación (DAM)**.  
-El objetivo es gestionar embarcaciones de distintos tipos aplicando **POO**, **estructuras de control**, **validación de datos** y **modularidad**.
+This project was developed as a practical assignment for Units 1, 2 and
+3 of the **Programming** module in the DAM program.\
+The goal is to manage different types of boats using **OOP**, **control
+structures**, **data validation**, and **modular design**.
 
----
+------------------------------------------------------------------------
 
-## 📌 Funcionalidad principal
+## 📌 Main Features
 
-El programa permite:
+The program allows you to:
 
-- Registrar embarcaciones de distintos tipos  
-  - Velero  
-  - Yate  
-  - Pesquera  
-  - Deportiva  
-- Mostrar listado de embarcaciones almacenadas  
-- Modificar datos de una embarcación existente  
-- Eliminar embarcaciones  
-- Buscar embarcaciones por ID  
-- Calcular tarifas base y aplicar descuentos (WIP)
+-   Register different types of boats:
+    -   Sailboat\
+    -   Yacht\
+    -   Fishing boat\
+    -   Sport boat\
+-   Display all registered boats\
+-   Edit the data of an existing boat\
+-   Delete boats\
+-   Search boats by ID\
+-   Calculate base fees and apply discounts (WIP)
 
-Todos los datos se almacenan en memoria mediante un `ArrayList`.
+All data is stored in memory using an `ArrayList`.
 
----
+------------------------------------------------------------------------
 
-## 🧱 Estructura del proyecto
+## 🧱 Project Structure
 
-club-nautico-java/
-│
-├── README.md
-└── src/
-└── clubnautico/
-├── ClubNautico.java
-├── Embarcacion.java
-├── Velero.java
-├── Yate.java
-├── Pesquera.java
-├── Deportiva.java
-└── InputUtils.java
+    club-nautico-java/
+    │
+    ├── README.md
+    └── src/
+        └── clubnautico/
+            ├── ClubNautico.java
+            ├── Embarcacion.java
+            ├── Velero.java
+            ├── Yate.java
+            ├── Pesquera.java
+            ├── Deportiva.java
+            └── InputUtils.java
 
+------------------------------------------------------------------------
 
----
+## 🧩 Technologies & Concepts Used
 
-## 🧩 Tecnologías utilizadas
+-   **Java 17+**
+-   Standard input with `Scanner`
+-   Object-Oriented Programming:
+    -   Classes & objects\
+    -   Inheritance\
+    -   Polymorphism\
+    -   Enums\
+    -   `instanceof`\
+-   Static utility methods\
+-   Input validation\
+-   Date handling with `LocalDate`
 
-- **Java 17+**
-- Entrada estándar con `Scanner`
-- Uso de:
-  - POO  
-  - Herencia  
-  - Enumeraciones  
-  - `instanceof`  
-  - Métodos estáticos  
-  - Validación de entrada  
-  - Manejo de fechas con `LocalDate`
+------------------------------------------------------------------------
 
----
+## 🔧 Key Classes
 
-## 🔧 Clases principales
+### ✔ `Embarcacion` (Base Class)
 
-### ✔ `Embarcacion`
-Clase base con atributos comunes:
-- ID automático
-- Nombre  
-- Eslora  
-- Fecha de registro  
-- Tipo (enum)  
-- Socio / no socio  
-- Métodos de tarifa y descuento
+Contains shared attributes: - Automatic ID\
+- Name\
+- Length (eslora)\
+- Registration date\
+- Type (enum)\
+- Member / non-member status\
+- Methods for calculating base fees and discounts
 
-### ✔ Subclases específicas
-Cada embarcación añade sus propios atributos:
+------------------------------------------------------------------------
 
-- `Velero` → mástiles, tripulación, capitán, tamaño  
-- `Yate` → potencia, camarotes, tamaño  
-- `Pesquera` → capacidad, licencia, zona, tamaño  
-- `Deportiva` → potencia, competición, modelo, tamaño  
+### ✔ Specific Subclasses
+
+Each boat type includes its own additional fields:
+
+-   `Velero` → masts, crew size, captain, size category\
+-   `Yate` → power, cabins, size category\
+-   `Pesquera` → capacity, license, fishing zone, size category\
+-   `Deportiva` → power, competition flag, model, size category
+
+------------------------------------------------------------------------
 
 ### ✔ `InputUtils`
-Clase de utilidades para lectura validada:
-- Strings no vacíos  
-- Enteros positivos  
-- Doubles positivos  
-- Booleanos SI/NO  
 
----
+Utility class for validated input: - Non-empty strings\
+- Positive integers\
+- Positive doubles\
+- Boolean YES/NO input
 
-## ▶️ Ejecución
+------------------------------------------------------------------------
 
-Compilar:
+## ▶️ Running the Program
 
-```bash
+Compile:
+
+``` bash
 javac src/clubnautico/*.java
+```
 
----
+------------------------------------------------------------------------
 
-### 🛠 Próximas mejoras (v1.1 – v2.0)
+## 🛠 Planned Improvements (v1.1 -- v2.0)
 
-Añadir submenú para modificar datos específicos por tipo
+-   Add a submenu to modify type-specific fields\
+-   Show detailed information when listing boats\
+-   File persistence (JSON / CSV)\
+-   More advanced fee calculation\
+-   Search by name\
+-   Optional refactor to MVC architecture
 
-Mostrar información específica al listar embarcaciones
+------------------------------------------------------------------------
 
-Persistencia en archivo (JSON / CSV)
+## 👨‍💻 Author
 
-Cálculo real de tarifas avanzadas
-
-Búsqueda por nombre
-
-Refactorización hacia MVC (opcional)
-
----
-
-### 👨‍💻 Autor
-
-David Cuadra Lara
-Proyecto académico – DAM (2025)
+**David Cuadra Lara**\
+Academic project -- DAM (2025)
