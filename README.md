@@ -13,7 +13,7 @@ Below you’ll find an overview of the **main projects**, **FP (DAM) exercises**
 These are the projects that represent my current technical level and learning focus.
 
 ### **1. Club Náutico – Java OOP Console Application**
-📁 `java/club-nautico-java/`  
+📁 `projects/java/club-nautico-java/`  
 A full Java console management system built to practice **Object-Oriented Programming**, **inheritance**, **polymorphism**, **clean input validation**, and **modular code design**.
 
 - CRUD system (create, list, modify, delete)  
@@ -30,21 +30,23 @@ A full Java console management system built to practice **Object-Oriented Progra
 
 All my official FP (DAM) exercises and assignments are organized here.
 
-📁 `FP/`
+📁 `fp_dam/`
 
 Includes:
 
-- **PRG** – Programming (Java, algorithms, OOP fundamentals)  
+- **PROG** – Programming (Java, algorithms, OOP fundamentals)  
 - **BD** – Databases (SQL, UML diagrams, schemas)  
 - **LM** – Lenguajes de Marcas (XML, DTD, HTML/CSS basics)  
-- **SINF / Entornos** – Systems & environment configuration  
+- **SI** – Systems & environment configuration
+- **ING** - Technical english
+- **IPE** - Workplace Safety & Risk Prevention (occupational hazards, safety measures, regulations)
 - More modules will be added as the course progresses.
 
 This section represents my formal academic work.
 
 ---
 
-## 🧪 Experiments, Tests & Small Scripts  
+## 🧪 Experiments, Tests & Small Scripts  (WIP)
 📁 `tests/`, `python/scripts/`, `sandbox/`
 
 These folders contain:
