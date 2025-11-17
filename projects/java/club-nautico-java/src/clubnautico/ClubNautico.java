@@ -138,32 +138,49 @@ public class ClubNautico {
                 case 2:
                     mostrarEmbarcaciones(embarcaciones);
                     break;
-                case 3:
-                    Embarcacion barcoModificado = buscarBarcoArray(sc);
-                    modificarDatos(barcoModificado, sc);
+                case 3: {
+                    Embarcacion barcoEncontrado = buscarBarcoArray(sc);
+                    if (barcoEncontrado == null) {
+                        break;
+                    }
+
+                    // Si existe barco:
+                    modificarDatos(barcoEncontrado, sc);
                     System.out.println("Modificando datos...");
 
                     System.out.printf(
                             "ID: %s | Nombre: %s | Tipo: %s | Eslora: %.2f m | Fecha: %s | Socio: %s%n",
-                            barcoModificado.getId(),
-                            barcoModificado.getNombre(),
-                            barcoModificado.getTipo(),
-                            barcoModificado.getEslora(),
-                            barcoModificado.getFechaRegistro(),
-                            barcoModificado.getEsSocio() ? "SI" : "NO"
+                            barcoEncontrado.getId(),
+                            barcoEncontrado.getNombre(),
+                            barcoEncontrado.getTipo(),
+                            barcoEncontrado.getEslora(),
+                            barcoEncontrado.getFechaRegistro(),
+                            barcoEncontrado.getEsSocio() ? "SI" : "NO"
                     );
                     break;
-                case 4:
-                    Embarcacion barcoEliminar = buscarBarcoArray(sc);
-                    eliminarEmbarcacion(barcoEliminar, sc);
+                }
+                case 4: {
+                    Embarcacion barcoEncontrado = buscarBarcoArray(sc);
+                    if (barcoEncontrado == null) {
+                        break;
+                    }
+                    eliminarEmbarcacion(barcoEncontrado, sc);
                     break;
-                case 5:
-                    System.out.println("Función de cálculo de tarifas todavía no implementada.");
-                    //WIP
+                }
+                case 5: {
+                    Embarcacion barcoEncontrado = buscarBarcoArray(sc);
+                    if (barcoEncontrado == null) {
+                        break;
+                    }
+                    
+                    barcoEncontrado.calcularTarifaBase();
+                    barcoEncontrado.aplicarDescuento();
+                    System.out.printf("tarifa final: %.2f €%n", barcoEncontrado.tarifa);
                     break;
+                }
+                    
                 case 6:
-                    System.out.println("Función de búsqueda por nombre todavía no implementada.");
-                    //WIP
+                    buscarId(sc);
                     break;
                 case 7:
                     sc.close(); // Cerramos scanner.
@@ -328,7 +345,7 @@ public class ClubNautico {
 
     // - Buscar por ID.
     public static Embarcacion buscarId(Scanner sc) {
-        System.out.println("Introduce la ID del barco a buscar: ");
+        System.out.print("Introduce la ID del barco a buscar: ");
         String idTemp = sc.nextLine().trim();
 
         // Revisamos array de barco - nombre para encontrar uno igual con equals.

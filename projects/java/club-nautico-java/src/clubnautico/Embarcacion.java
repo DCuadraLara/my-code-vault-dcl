@@ -25,6 +25,7 @@ public class Embarcacion {
     private LocalDate fechaRegistro;
     private boolean esSocio;
     private TipoEmbarcacion tipo;
+    public double tarifa;
 
     // Constructor por defecto
     public Embarcacion() {
@@ -38,13 +39,15 @@ public class Embarcacion {
     }
 
     public double calcularTarifaBase() {
-        // Eslora * 10 + año de registro * 2
-        return eslora * 10 + fechaRegistro.getYear() * 2;
+        System.out.println("Calculando tarifa base...");
+        double base = eslora * 10 + (2025 - fechaRegistro.getYear()) * 2;
+        this.tarifa = base;
+        return tarifa;
     }
 
-    public double aplicarDescuento(double tarifa) {
+    public double aplicarDescuento() {
         // Devuelve tarifa con descuento si la condicion es true.
-        return esSocio ? tarifa * 0.85 : tarifa; // WIP
+        return esSocio ? this.tarifa * 0.85 : this.tarifa; // WIP
     }
 
     private String calcularId() {
